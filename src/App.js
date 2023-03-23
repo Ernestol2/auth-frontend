@@ -1,13 +1,13 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import FreeComponent from './FreeComponent';
-import AuthComponent from './AuthComponent';
-import ProtectedRoutes from './ProtectedRoutes';
+import FreeComponent from './components/FreeComponent';
+import AuthComponent from './components/AuthComponent';
+import ProtectedRoutes from './components/ProtectedRoutes';
 import CustomNavbar from './CustomNavbar';
 import './App.css';
-import Register from './Register';
-import Login from './Login';
-import Home from './Home';
+import Register from './components/Register';
+import Login from './components/Login';
+import Home from './components/Home';
 
 function App() {
   return (

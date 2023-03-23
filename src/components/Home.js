@@ -1,9 +1,9 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import fondo from "./img/img1.jpg";
-import matrix from "./img/matrix.jpg";
-import nasa from "./img/nasa.jpg";
-import rayo from "./img/rayo.jpg";
+import fondo from "../img/img1.jpg";
+import matrix from "../img/matrix.jpg";
+import nasa from "../img/nasa.jpg";
+import rayo from "../img/rayo.jpg";
 
 export default function Home() {
   return (
