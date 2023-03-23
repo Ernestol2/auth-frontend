@@ -20,7 +20,6 @@ export default function FreeComponent() {
   
   return (
     <div>
-        <h1 className="text-center">Free Component</h1>
         <h3 className="text-center text-success">{message}!!</h3>
     </div>
   )

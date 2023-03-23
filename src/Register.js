@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form, Button, Col } from "react-bootstrap";
 import axios from "axios";
 
+
 export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,14 +22,19 @@ export default function Register() {
     axios(config)
       .then((result) => {
         setRegister(true);
+        setTimeout(() => {
+          window.location.href = "/login";
+        }, 3000)
       })
       .catch((err) => {
         err = new Error();
       });
   };
 
+
+
   return (
-    <div className="d-flex justify-content-center"> 
+    <div className="d-flex justify-content-center text-light"> 
     <Col xs={8} sm={6} md={4} lg={3}>
     <h2>Register</h2>
     <Form onSubmit={(e) => handleSubmit(e)}>
@@ -66,10 +72,10 @@ export default function Register() {
         Register
       </Button>
       {register ? (
-        <p className="text-success">You Are Registered Succesfully!</p>
-      ) : (
-        <p className="text-danger">You Are Not Registered</p>
-      )}
+          <p className="text-success">You Can Login Now!</p>
+        ) : (
+          <p className="text-danger">You Are Not Registered</p>
+        )}
     </Form>
     </Col>
   </div>

@@ -17,7 +17,16 @@ code {
   width: 900px;
   height: 500px;
   margin: auto;
-  margin-top: 70px;
+  margin-top: 50px;
+}
+
+.auth {
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
 }
 
 @media (max-width: 900px) {

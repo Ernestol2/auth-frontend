@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Button } from 'react-bootstrap';
+import TypeIt from 'typeit-react';
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 const token = cookies.get("TOKEN");
+
 
 
 export default function AuthComponent() {
@@ -27,24 +28,29 @@ export default function AuthComponent() {
       })
   }, []);
 
-  const logout = () => {
-    //remover la cookie
-    cookies.remove("TOKEN", { path: "/" });
-    //redireccionar el usuario a la pagina principal
-    window.location.href = "/"
-  };
+  
 
   return (
     <>
-    <div className='d-flex justify-content-end'>
-    <Button 
-          type='submit' 
-          variant='danger'
-          onClick={() => logout()}>Logout</Button>
-    </div>
     <div className="text-center">
-        <h1>Auth Component</h1>
-        <h3 className="text-success">{message}...</h3>
+        <h3 className='text-primary'>{message}...</h3>
+        <TypeIt
+          className="auth"
+          options={{speed: 50, loop: true}}
+          getBeforeInit={(instance) => {
+            instance.type("Hola, Esta es la Ruta Autorizata")
+                    .pause(750)
+                    .delete(2)
+                    .pause(500)
+                    .type("da.")
+                    .break()
+                    .type("Haz ingresado exitosamente")
+                    .break()
+                    .type("a nuestra ruta Privada.")
+                    .pause(2000);
+
+            return instance;
+          }} />
     </div>
     </>
   )

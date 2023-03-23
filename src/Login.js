@@ -24,7 +24,9 @@ export default function Login() {
     .then((result) => {
       setLogin(true);
       cookies.set("TOKEN", result.data.token, {path: "/"});
-      window.location.href = "/auth";
+      setTimeout(() => {
+        window.location.href = "/auth";
+      }, 3000)
     })
     .catch((err) => {
       err = new Error();
@@ -32,7 +34,7 @@ export default function Login() {
   }
 
   return (
-    <div className='d-flex justify-content-center'>
+    <div className='d-flex justify-content-center text-light'>
      <Col xs={8} sm={6} md={4} lg={3}>
        <h2>Login</h2>
       <Form onSubmit={(e) => handleSubmit(e)}>
