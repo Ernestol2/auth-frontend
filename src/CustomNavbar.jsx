@@ -32,8 +32,6 @@ export default function CustomNavbar() {
             <Nav.Link href="/auth">Ruta Privada</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="/register">Registrarme</Nav.Link>
-            <Nav.Link href="/login">Login</Nav.Link>
             <Nav.Link 
               type='submit' 
               variant='danger'
