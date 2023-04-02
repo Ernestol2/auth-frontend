@@ -34,7 +34,7 @@ export default function Login() {
   }
 
   return (
-    <div className='d-flex justify-content-center text-light'>
+    <div className='login d-flex justify-content-center text-light'>
      <Col xs={8} sm={6} md={4} lg={3}>
        <h2>Login</h2>
       <Form onSubmit={(e) => handleSubmit(e)}>
