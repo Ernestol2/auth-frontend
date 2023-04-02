@@ -6,7 +6,8 @@ import axios from "axios";
 export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [register, setRegister] = useState(false);
+  const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = (e) => {
     //prevent the form refreshing the page
@@ -21,10 +22,12 @@ export default function Register() {
     };
     axios(config)
       .then((result) => {
-        setRegister(true);
-        setTimeout(() => {
+        setMessage(result.data.message);
+        setSuccess(result.data.success);
+        if(success) { setTimeout(() => {
           window.location.href = "/login";
-        }, 3000)
+        }, 3000)}
+        
       })
       .catch((err) => {
         err = new Error();
@@ -71,11 +74,9 @@ export default function Register() {
       >
         Register
       </Button>
-      {register ? (
-          <p className="text-success">You Can Login Now!</p>
-        ) : (
-          <p className="text-danger">You Are Not Registered</p>
-        )}
+      { message ? (
+            <p>{message}</p>
+         ): <p></p> }
     </Form>
     </Col>
   </div>
