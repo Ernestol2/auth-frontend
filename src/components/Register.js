@@ -37,7 +37,7 @@ export default function Register() {
         <Form onSubmit={(e) => handleSubmit(e)}>
           {/* email */}
           <Form.Group controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
+            <Form.Label>E-mail address</Form.Label>
             <Form.Control
               type="email"
               name="email"

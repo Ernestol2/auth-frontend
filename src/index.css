@@ -1,8 +1,14 @@
-#root{
+
+#root {
   background-color: #282c34;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   width: auto;
   height: auto;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
 }
 
 .main-page {
@@ -20,10 +26,91 @@
   align-items: center;
 }
 
+.footer {
+  background-color: #212529;
+  width: 100%;
+  height: 150px;
+  position: relative;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.social {
+  font-size: 30px;
+  display: flex;
+  justify-content: space-around; 
+}
+
+.social a {
+  color: white;
+  text-decoration: none;
+}
+
+.social a:hover {
+  color: gray;
+}
+
+.text-footer {
+  color: white;
+  font-size: 13px;
+}
+
+.free-component {
+  width: 100%;
+  min-height: 75vh;
+  text-align: center;
+}
+
+.users-container {
+  width: 400px !important;
+  border: 2px solid white;
+  margin: 10px;
+  border-radius: 30px;
+  background-color: #212529;
+}
+
+.users-container:hover {
+  background-color: #282c34;
+  box-shadow: 5px 5px 5px 1px rgba(225, 255, 255, 0.2);
+  transition: all 0.2s linear;
+}
+
+.users-list {
+  width: auto;
+  list-style: none;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px;
+  padding: 5px;
+}
+
+
+.users-info {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.user-avatar {
+  width: 70px;
+  height: 70px;
+  background-color: black;
+  border-radius: 50px;
+  border: 2px solid pink;
+}
+
+
+
 .login {
   background-color: #282c34;
   width: 100%;
-  height: 100vh;
+  height: 72vh;
   padding: 20px;
   margin: 20px;
 }
@@ -31,12 +118,14 @@
 .register {
   background-color: #282c34;
   width: 100%;
-  height: 100vh;
+  height: 72vh;
   padding: 20px;
   margin: 20px;
 }
 
 .auth {
+  width: 100%;
+  min-height: 50vh;
   font-weight: bold;
   font-size: 20px;
   color: white;

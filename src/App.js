@@ -8,10 +8,11 @@ import './App.css';
 import Register from './components/Register';
 import Login from './components/Login';
 import Home from './components/Home';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <>
+    <div className='App'>
       <CustomNavbar />
            {/* create routes here */}
       <Switch>
@@ -21,8 +22,8 @@ function App() {
         <Route exact path="/free" component={FreeComponent} />
         <ProtectedRoutes path="/auth" component={AuthComponent} />
       </Switch>
-
-    </>
+      <Footer />
+    </div>
   );
 }
 

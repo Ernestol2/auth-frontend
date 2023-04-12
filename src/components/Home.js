@@ -1,10 +1,11 @@
 import React from "react";
 import { Button, Container, Row, Col } from "react-bootstrap";
 import nasa from "../img/nasa.jpg";
+import 'animate.css'
 
 const myStyle = {
   backgroundImage: `url(${nasa})`,
-  height: "65vh",
+  height: "50vh",
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
   opacity: .9
@@ -13,15 +14,17 @@ const myStyle = {
 export default function Home() {
   return (
     <div className="main-page">
-      <div style={myStyle} className="titles">
-            <h2 className="text-info p-5">BIENVENIDO A REAT-AUTH</h2>
-            <p className="text-light">En esta pagina usamos JWT, Cookies, Hooks
-            y otros paquetes para su correcto funcionamiento.</p>
-            <p className="text-light p-3">Podras visitar rutas publicas sin estar registrado
-            y rutas privadas una ves te registres y hagas login.</p>
-            <div className="buttons">
-                <Button href="/register" variant="outline-info">Registrame</Button>{' '}
-                <Button href="/login" variant="outline-light">Login</Button>
+        <div style={myStyle} className="titles p-4">
+            <div className="animate__animated animate__fadeInDown">
+                <h1 className="text-secondary">BIENVENIDO</h1>
+                <h6 className="text-light">En esta pagina usamos JWT, Cookies, Hooks
+                y otros paquetes para su correcto funcionamiento.</h6>
+                <h6 className="text-light">Podras visitar rutas publicas sin estar registrado
+                y rutas privadas una ves te registres y hagas login.</h6>
+                <div className="buttons m-4">
+                    <Button href="/register" variant="light">Registrame</Button>{' '}
+                    <Button href="/login" variant="light">Login</Button>
+                </div>
             </div>
         </div>
         <div>
