@@ -6,10 +6,21 @@
   height: auto;
 }
 
+/*NAVIGATION STYLES*/
+
 .logo {
   width: 30px;
   height: 30px;
+  margin-left: 20px;
+  cursor: pointer;
 }
+
+.shopping-cart {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/*HOMEPAGE STYLES*/
 
 .main-page {
   text-align: center;
@@ -25,6 +36,8 @@
   justify-content: space-between;
   align-items: center;
 }
+
+/*FOOTER*/
 
 .footer {
   background-color: #212529;
@@ -58,6 +71,8 @@
   font-size: 13px;
 }
 
+/*USERS ROUTE COMPONENT*/
+
 .free-component {
   width: 100%;
   min-height: 75vh;
@@ -65,8 +80,8 @@
 }
 
 .users-container {
-  width: 400px !important;
-  border: 2px solid white;
+  width: 350px !important;
+  border: 1px solid white;
   margin: 10px;
   border-radius: 30px;
   background-color: #212529;
@@ -79,9 +94,9 @@
 }
 
 .users-list {
-  width: auto;
+  width: 100%;
   list-style: none;
-  font-size: 15px;
+  font-size: 0.8rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -105,7 +120,53 @@
   border: 2px solid pink;
 }
 
+/*PRIVATE ROUTE - PRODUCTS*/
 
+.auth-page {
+  width: 100%;
+  min-height: 75vh;
+  font-size: 0.9rem;
+}
+
+.auth-page-container {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.auth-sidebar {
+  white-space: nowrap;
+  font-size: 11px;
+}
+
+
+.auth-products {
+  display: flex;
+  min-width: 100%;
+  margin: 10px;
+  background-color: #212529;
+}
+
+.auth-products:hover {
+  background-color: #5c6069;
+  cursor: pointer;
+}
+
+.product-img {
+  float: left;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+}
+
+.auth-product {
+  line-height: normal;
+  margin: 2px;
+  white-space: break-spaces;
+}
+
+/*LOGIN FORM*/
 
 .login {
   background-color: #282c34;
@@ -115,6 +176,8 @@
   margin: 20px;
 }
 
+/*REGISTER FORM*/
+
 .register {
   background-color: #282c34;
   width: 100%;
@@ -123,14 +186,36 @@
   margin: 20px;
 }
 
-.auth {
-  width: 100%;
-  min-height: 50vh;
-  font-weight: bold;
-  font-size: 20px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  margin-top: 200px;
+/*RESPONSIVE MEDIA QUERYS*/
+
+@media (max-width: 1075px) {
+  .navbar-title-brand {
+    display: none;
+  }
+  
+  .auth-sidebar {
+    display: none;
+  }
+
+  .product-img {
+    width: 130px;
+    height: 130px;
+    text-align: center;
+  }
+
+  .auth-products {
+    display: flex;
+    flex-direction: column;
+    padding: 1px;
+    margin: 1px;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  .prueba {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
 }
 

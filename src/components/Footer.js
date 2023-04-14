@@ -1,18 +1,18 @@
 import React from 'react'
-import { Facebook, Instagram, Whatsapp } from 'react-bootstrap-icons'
+import { Google, Github, Linkedin } from 'react-bootstrap-icons'
 
 export default function Footer() {
   return (
     <footer className='footer'>
         <div className='social'>
-            <a href="#!">
-              <Facebook />
+            <a href="https://github.com/Ernestol2">
+              <Github />
             </a>
-            <a href="#!">
-              <Instagram />
+            <a href="https://www.linkedin.com/in/ernesto-lopez-5a21941a1/">
+              <Linkedin />
             </a>
-            <a href="#!">
-              <Whatsapp />
+            <a href="https://www.gmail.com">
+              <Google />
             </a>
         </div>
         <div className='text-footer'>
