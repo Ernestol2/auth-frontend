@@ -25,7 +25,7 @@ export default function CustomNavbar() {
       sticky="top"
     >
       <Container>
-        <img href="/" className="logo" src={logo} alt="logo-react" />
+        <a href="/"><img className="logo" src={logo} alt="logo-react" /></a>
         <Navbar.Brand className="navbar-title-brand" href="/">
           React-Auth
         </Navbar.Brand>
