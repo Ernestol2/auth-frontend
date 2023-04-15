@@ -13,21 +13,18 @@ export default function Register() {
     const config = {
       method: "post",
       url: "https://authentication-app-mern-railway-production.up.railway.app/register",
-      data: {
-        email,
-        password,
-      },
+      data: { email, password },
     };
+
     axios(config)
       .then((result) => {
         setMessage(result.data.message);
-        (result.data.success) ? (setTimeout(() => {window.location.href = "/login"}, 3000))
-                              : (setTimeout(() => {window.location.href = "/register"}, 3000))
-        
+        (result.data.success) ? (setTimeout(() => {window.location.href = "/login"}, 2000))
+                              : (setTimeout(() => {window.location.href = "/register"}, 2000))    
       })
       .catch((err) => {
         err = new Error();
-      });
+      })
   };
 
   return (

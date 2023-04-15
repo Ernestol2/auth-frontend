@@ -26,7 +26,7 @@ export default function Login() {
       cookies.set("TOKEN", result.data.token, {path: "/"});
       setTimeout(() => {
         window.location.href = "/auth";
-      }, 3000)
+      }, 2000)
     })
     .catch((err) => {
       err = new Error();

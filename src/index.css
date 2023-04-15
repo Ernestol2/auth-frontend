@@ -170,7 +170,7 @@
 
 .login {
   background-color: #282c34;
-  width: 100%;
+  width: auto;
   height: 72vh;
   padding: 20px;
   margin: 20px;
@@ -180,7 +180,7 @@
 
 .register {
   background-color: #282c34;
-  width: 100%;
+  width: auto;
   height: 72vh;
   padding: 20px;
   margin: 20px;
