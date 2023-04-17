@@ -15,6 +15,15 @@
   cursor: pointer;
 }
 
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: gray;
+}
+
 .shopping-cart {
   margin-right: 20px;
   cursor: pointer;

@@ -1,5 +1,6 @@
 import React from "react";
-import { Button, Container, Row, Col } from "react-bootstrap";
+import {Link} from 'react-router-dom';
+import { Container, Row, Col } from "react-bootstrap";
 import nasa from "../img/nasa.jpg";
 import 'animate.css'
 
@@ -22,8 +23,9 @@ export default function Home() {
                 <h6 className="text-light">Podras visitar rutas publicas sin estar registrado
                 y rutas privadas una ves te registres y hagas login.</h6>
                 <div className="buttons m-4">
-                    <Button href="/register" variant="light">Registrame</Button>{' '}
-                    <Button href="/login" variant="light">Login</Button>
+                    <Link className="btn btn-light" to="/register">Registrame</Link>
+                    {' '}
+                    <Link className="btn btn-light" to="/login">Login</Link>
                 </div>
             </div>
         </div>

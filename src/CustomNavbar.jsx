@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -25,19 +26,19 @@ export default function CustomNavbar() {
       sticky="top"
     >
       <Container>
-        <a href="/"><img className="logo" src={logo} alt="logo-react" /></a>
+        <Link to="/"><img className="logo" src={logo} alt="logo-react" /></Link>
         <Navbar.Brand className="navbar-title-brand" href="/">
           React-Auth
         </Navbar.Brand>
         <Navbar.Toggle className="navbar-toggle" aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/">Inicio</Nav.Link>
-            <Nav.Link href="/free">Usuarios</Nav.Link>
-            <Nav.Link href="/auth">Ruta Privada</Nav.Link>
-            <Nav.Link type="submit" variant="danger" onClick={() => logout()}>
+          <Nav className="me-auto nav-links">
+            <Link to="/">Inicio</Link>
+            <Link to="/free">Usuarios</Link>
+            <Link to="/auth">Ruta Privada</Link>
+            <Link type="submit" variant="danger" onClick={() => logout()}>
               Logout
-            </Nav.Link>
+            </Link>
           </Nav>
           <Nav></Nav>
         </Navbar.Collapse>
